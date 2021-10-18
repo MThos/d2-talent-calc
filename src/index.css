@@ -1,5 +1,7 @@
 body {
-  margin: 0;
+  background: #202020;
+  color: white;
+  margin-top: 15px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +12,166 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.bg {
+  background-image: url("/src/background.jpg");
+  background-size: cover;
+  border: 1px solid darkgray;
+  display: flex;
+  padding: 35px;
+  height: 575px;
+  width: 398px;
+}
+
+.pts {
+  background: #202020;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  padding: 0 1px 0 0;
+  text-align: center;
+  width: 25px !important;
+}
+
+.skill {
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+}
+
+.skill:hover {
+  cursor: pointer;
+  filter: brightness(140%);
+  -webkit-filter: brightness(140%);
+}
+
+.skills * {
+  display: block;
+  position: absolute;
+  width: 75px;
+}
+
+.skills-counter * {
+  display: block;
+  position: absolute;
+}
+
+.talent-calculator {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 470px;
+}
+
+.class-name { 
+  background: #101010;
+  border: 1px solid darkgray;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+}
+
+.builds {
+  background: #101010;
+  border: 1px solid darkgray;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.left {
+  border-right: 1px solid darkgray;
+}
+
+.right {
+  border-left: 1px solid darkgray;
+}
+
+.build-btn:hover {
+  color: gold;  
+  cursor: pointer;
+}
+
+/* amazon */
+#ama-jab {
+  margin: 0;
+}
+
+#ama-jab-pts {
+  margin: 43px 0 0 76px;
+}
+
+#ama-power-strike {
+  margin: 100px 0 0 150px;
+}
+
+#ama-power-strike-pts {
+  margin: 143px 0 0 226px;
+}
+
+#ama-poison-javelin {
+  margin: 100px 0 0 300px;
+}
+
+#ama-poison-javelin-pts {
+  margin: 144px 0 0 376px;
+}
+
+#ama-impale {
+  margin: 200px 0 0 0;
+}
+
+#ama-impale-pts {
+  margin: 244px 0 0 76px;
+}
+
+#ama-lightning-bolt {
+  margin: 200px 0 0 300px;
+}
+
+#ama-lightning-bolt-pts {
+  margin: 244px 0 0 376px;
+}
+
+#ama-charged-strike {
+  margin: 300px 0 0 150px;
+}
+
+#ama-charged-strike-pts {
+  margin: 344px 0 0 226px;
+}
+
+#ama-plague-javelin {
+  margin: 300px 0 0 300px;
+}
+
+#ama-plague-javelin-pts {
+  margin: 344px 0 0 376px;
+}
+
+#ama-fend {
+  margin: 400px 0 0 0;
+}
+
+#ama-fend-pts {
+  margin: 444px 0 0 76px;
+}
+
+#ama-lightning-strike {
+  margin: 500px 0 0 150px;
+}
+
+#ama-lightning-strike-pts {
+  margin: 544px 0 0 226px;
+}
+
+#ama-lightning-fury {
+  margin: 500px 0 0 300px;
+}
+
+#ama-lightning-fury-pts {
+  margin: 544px 0 0 376px;
 }
