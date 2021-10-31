@@ -4,13 +4,15 @@ import Skills from './components/Skills';
 import SkillsCounter from './components/SkillsCounter';
 import BuildTabs from './components/BuildTabs';
 import D2ClassName from './components/D2ClassName';
+import D2ClassPicker from './components/D2ClassPicker';
 
 class App extends Component {
-    constructor(){
+    constructor() {
         super();
 
         this.state = {
-            d2class: "amazon",
+            classes: ['amazon','assassin','barbarian','druid','necromancer','paladin','sorceress'],
+            activeClass: "amazon",
             activeBuild: "build1",
             build1: "javelin and spear",
             build2: "passive and magic",
@@ -31,6 +33,12 @@ class App extends Component {
     onClick = skill => {
         console.log(skill);
         skill.preventDefault();
+        if (skill.target.className === "d2class") {
+            this.setState({
+                activeClass: skill.target.id
+            })
+        }
+
         if (skill.target.id === "build1") {
             this.setState({
                 activeBuild: "build1"
@@ -171,8 +179,14 @@ class App extends Component {
     render() {
         return (
             <div>
-                <div className="talent-calculator">
-                    <D2ClassName d2class={this.state.d2class} />
+                <div className="class-picker">
+                    <D2ClassPicker 
+                        onClick={this.onClick}
+                        classes={this.state.classes}
+                        activeClass={this.state.activeClass} />
+                </div>
+                <div className="talent-calculator"> 
+                    <D2ClassName activeClass={this.state.activeClass} />
                     <BuildTabs 
                         onClick={this.onClick}
                         activeBuild={this.state.activeBuild}
