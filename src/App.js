@@ -2,12 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 import Skills from './components/Skills';
 import SkillsCounter from './components/SkillsCounter';
+import BuildTabs from './components/BuildTabs';
+import D2ClassName from './components/D2ClassName';
 
 class App extends Component {
     constructor(){
         super();
 
         this.state = {
+            d2class: "amazon",
+            activeBuild: "build1",
+            build1: "javelin and spear",
+            build2: "passive and magic",
+            build3: "bow and crossbow",
             jab: 0,
             powerStrike: 0,
             poisonJavelin: 0,
@@ -24,6 +31,20 @@ class App extends Component {
     onClick = skill => {
         console.log(skill);
         skill.preventDefault();
+        if (skill.target.id === "build1") {
+            this.setState({
+                activeBuild: "build1"
+            })
+        } else if (skill.target.id === "build2") {
+            this.setState({
+                activeBuild: "build2"
+            })
+        } else if (skill.target.id === "build3") {
+            this.setState({
+                activeBuild: "build3"
+            })
+        }
+
         if (skill.target.id === "ama-jab") {
             if (skill.type === "click") {
                 this.setState({
@@ -151,25 +172,26 @@ class App extends Component {
         return (
             <div>
                 <div className="talent-calculator">
-                    <div className="class-name">AMAZON</div>
-                    <div className="builds">
-                        <span id="javelin" class="build-btn left">JAVELIN AND SPEAR</span>
-                        <span id="passive" class="build-btn">PASSIVE AND MAGIC</span>
-                        <span id="bow" class="build-btn right">BOW AND CROSSBOW</span>
-                    </div>
-                    <div className="bg">
+                    <D2ClassName d2class={this.state.d2class} />
+                    <BuildTabs 
+                        onClick={this.onClick}
+                        activeBuild={this.state.activeBuild}
+                        build1={this.state.build1}
+                        build2={this.state.build2}
+                        build3={this.state.build3} />
+                    <div className="tree">
                         <Skills onClick={this.onClick} />
                         <SkillsCounter 
-                            jab = {this.state.jab}
-                            powerStrike = {this.state.powerStrike}
-                            poisonJavelin = {this.state.poisonJavelin}
-                            impale = {this.state.impale}
-                            lightningBolt = {this.state.lightningBolt}
-                            chargedStrike = {this.state.chargedStrike}
-                            plagueJavelin = {this.state.plagueJavelin}
-                            fend = {this.state.fend}
-                            lightningStrike = {this.state.lightningStrike}
-                            lightningFury = {this.state.lightningFury} />
+                            jab={this.state.jab}
+                            powerStrike={this.state.powerStrike}
+                            poisonJavelin={this.state.poisonJavelin}
+                            impale={this.state.impale}
+                            lightningBolt={this.state.lightningBolt}
+                            chargedStrike={this.state.chargedStrike}
+                            plagueJavelin={this.state.plagueJavelin}
+                            fend={this.state.fend}
+                            lightningStrike={this.state.lightningStrike}
+                            lightningFury={this.state.lightningFury} />
                     </div>
                 </div>
             </div>
