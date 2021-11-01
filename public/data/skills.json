@@ -1,0 +1,25 @@
+{
+    "amazon": {
+        "build1": {
+            "name": "javelin and spear",
+            "skills": [
+                "jab",
+                "power strike",
+                "poison javelin",
+                "impale",
+                "lightning bolt",
+                "charged strike",
+                "plague javelin",
+                "fend",
+                "lightning strike",
+                "lightning fury"
+            ]
+        },
+        "build2": {
+            "name": "passive and magic"
+        },
+        "build3": {
+            "name": "bow and crossbow"
+        }
+    }
+}

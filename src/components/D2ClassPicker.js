@@ -9,9 +9,9 @@ class D2ClassPicker extends Component {
         return (
             classes.map(function(name) {
                 if (activeClass === name) {
-                    return <div id={name} className="d2class active" onClick={e => onclick(e)}>{name.toUpperCase()}</div>;
+                    return <div id={name} key={name} className="d2class active" onClick={e => onclick(e)}>{name.toUpperCase()}</div>;
                 } else {
-                    return <div id={name} className="d2class" onClick={e => onclick(e)}>{name.toUpperCase()}</div>;
+                    return <div id={name} key={name} className="d2class" onClick={e => onclick(e)}>{name.toUpperCase()}</div>;
                 }
             })
         );

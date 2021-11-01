@@ -20,7 +20,7 @@ code {
 
 .class-picker {
   display: flex;
-  margin: 40px auto 20px auto;
+  margin: 20px auto;
   width: 750px;
 }
 
@@ -28,7 +28,7 @@ code {
   background: black;
   border: 1px solid darkgray;
   flex-direction: row;
-  font-weight: 600;
+  font-weight: 700;
   padding: 15px 10px;
 }
 
@@ -81,7 +81,7 @@ code {
 .talent-calculator {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   width: 470px;
 }
 
@@ -89,7 +89,7 @@ code {
   background: #101010;
   border: 1px solid darkgray;
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 700;
   padding: 10px;
   text-align: center;
 }
@@ -100,7 +100,7 @@ code {
   display: flex;
   flex-direction: row;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 700;
   padding: 10px 0;
   text-align: center;
 }
@@ -116,85 +116,4 @@ code {
 .build-btn:hover {
   color: gold;  
   cursor: pointer;
-}
-
-/* amazon */
-#ama-jab {
-  margin: 0;
-}
-
-#ama-jab-pts {
-  margin: 49px 0 0 76px;
-}
-
-#ama-power-strike {
-  margin: 100px 0 0 150px;
-}
-
-#ama-power-strike-pts {
-  margin: 149px 0 0 226px;
-}
-
-#ama-poison-javelin {
-  margin: 100px 0 0 300px;
-}
-
-#ama-poison-javelin-pts {
-  margin: 150px 0 0 376px;
-}
-
-#ama-impale {
-  margin: 200px 0 0 0;
-}
-
-#ama-impale-pts {
-  margin: 250px 0 0 76px;
-}
-
-#ama-lightning-bolt {
-  margin: 200px 0 0 300px;
-}
-
-#ama-lightning-bolt-pts {
-  margin: 250px 0 0 376px;
-}
-
-#ama-charged-strike {
-  margin: 300px 0 0 150px;
-}
-
-#ama-charged-strike-pts {
-  margin: 350px 0 0 226px;
-}
-
-#ama-plague-javelin {
-  margin: 300px 0 0 300px;
-}
-
-#ama-plague-javelin-pts {
-  margin: 350px 0 0 376px;
-}
-
-#ama-fend {
-  margin: 400px 0 0 0;
-}
-
-#ama-fend-pts {
-  margin: 450px 0 0 76px;
-}
-
-#ama-lightning-strike {
-  margin: 500px 0 0 150px;
-}
-
-#ama-lightning-strike-pts {
-  margin: 550px 0 0 226px;
-}
-
-#ama-lightning-fury {
-  margin: 500px 0 0 300px;
-}
-
-#ama-lightning-fury-pts {
-  margin: 550px 0 0 376px;
 }
