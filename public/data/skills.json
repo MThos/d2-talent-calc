@@ -16,10 +16,316 @@
             ]
         },
         "build2": {
-            "name": "passive and magic"
+            "name": "passive and magic",
+            "skills": [
+                "inner sight",
+                "critical strike",
+                "dodge",
+                "slow missiles",
+                "avoid",
+                "penetrate",
+                "decoy",
+                "evade",
+                "valkyrie",
+                "pierce"
+            ]
         },
         "build3": {
-            "name": "bow and crossbow"
+            "name": "bow and crossbow",
+            "skills": [
+                "magical arrow",
+                "fire arrow",
+                "cold arrow",
+                "multishot",
+                "exploding arrow",
+                "ice arrow",
+                "guided arrow",
+                "strafe",
+                "immolation arrow",
+                "freezing arrow"
+            ]
+        }
+    },
+    "assassin": {
+        "build1": {
+            "name": "Martial Arts",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build2": {
+            "name": "Shadow Disciplines",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build3": {
+            "name": "Traps",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "barbarian": {
+        "build1": {
+            "name": "Warcries",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build2": {
+            "name": "Combat Masteries",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build3": {
+            "name": "Combat Skills",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "druid": {
+        "build1": {
+            "name": "Elemental",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build2": {
+            "name": "Shape Shifting",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build3": {
+            "name": "Summoning",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "necromancer": {
+        "build1": {
+            "name": "Summoning",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build2": {
+            "name": "Poison and Bone",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build3": {
+            "name": "Curses",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "paladin": {
+        "build1": {
+            "name": "Defensive Auras",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build2": {
+            "name": "Offensive Auras",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build3": {
+            "name": "Combat Skills",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "sorceress": {
+        "build1": {
+            "name": "Cold",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build2": {
+            "name": "Lightning",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        "build3": {
+            "name": "Fire",
+            "skills": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
         }
     }
 }

@@ -38,9 +38,10 @@ class App extends Component {
         .then((response) => response.json())
         .then(SkillsData => {
             this.setState({ skills: SkillsData });
-            this.setState({ build1: SkillsData.amazon.build1.name });
-            this.setState({ build2: SkillsData.amazon.build2.name });
-            this.setState({ build3: SkillsData.amazon.build3.name });
+            this.setState({ build1: SkillsData[this.state.activeClass].build1.name });
+            this.setState({ build2: SkillsData[this.state.activeClass].build2.name });
+            this.setState({ build3: SkillsData[this.state.activeClass].build3.name });
+            console.log(this.state.skills);
         })
         .catch(err => console.error(err));
     }
@@ -51,6 +52,9 @@ class App extends Component {
         // classes
         if (skill.target.className === "d2class") {
             this.setState({ activeClass: skill.target.id })
+            this.setState({ build1: this.state.skills[skill.target.id].build1.name });
+            this.setState({ build2: this.state.skills[skill.target.id].build2.name });
+            this.setState({ build3: this.state.skills[skill.target.id].build3.name });
         }
 
         // builds

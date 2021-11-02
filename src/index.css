@@ -95,6 +95,7 @@ code {
 }
 
 .builds {
+  align-items: center;
   background: #101010;
   border: 1px solid darkgray;
   display: flex;
@@ -107,10 +108,22 @@ code {
 
 #build1 {
   border-right: 1px solid darkgray;
+  flex-basis: 33%;
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+#build2 {
+  flex-basis: 33%;
+  flex-grow: 1;
+  padding: 0 10px;
 }
 
 #build3 {
   border-left: 1px solid darkgray;
+  flex-basis: 33%;
+  flex-grow: 1;
+  padding: 0 10px;
 }
 
 .build-btn:hover {
