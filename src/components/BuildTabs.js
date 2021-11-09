@@ -2,33 +2,33 @@ import React, {Component} from 'react';
 
 class BuildTabs extends Component {
     render() {
-        let activeBuild = this.props.activeBuild;
-        let build1 = this.props.build1;
-        let build2 = this.props.build2;
-        let build3 = this.props.build3;
+        let activeTree = this.props.activeTree;
+        let tree1 = this.props.tree1;
+        let tree2 = this.props.tree2;
+        let tree3 = this.props.tree3;
 
-        if (activeBuild === "build1") {
+        if (activeTree === "tree1") {
             return (
                 <div className="builds">
-                    <span id="build1" className="build-btn active" onClick={e => this.props.onClick(e)}>{build1.toUpperCase()}</span>
-                    <span id="build2" className="build-btn" onClick={e => this.props.onClick(e)}>{build2.toUpperCase()}</span>
-                    <span id="build3" className="build-btn" onClick={e => this.props.onClick(e)}>{build3.toUpperCase()}</span>
+                    <span id="tree1" className="build-btn active" onClick={e => this.props.onClick(e)}>{tree1.toUpperCase()}</span>
+                    <span id="tree2" className="build-btn" onClick={e => this.props.onClick(e)}>{tree2.toUpperCase()}</span>
+                    <span id="tree3" className="build-btn" onClick={e => this.props.onClick(e)}>{tree3.toUpperCase()}</span>
                 </div>
             );
-        } else if (activeBuild === "build2") {
+        } else if (activeTree === "tree2") {
             return (
                 <div className="builds">
-                    <span id="build1" className="build-btn" onClick={e => this.props.onClick(e)}>{build1.toUpperCase()}</span>
-                    <span id="build2" className="build-btn active" onClick={e => this.props.onClick(e)}>{build2.toUpperCase()}</span>
-                    <span id="build3" className="build-btn" onClick={e => this.props.onClick(e)}>{build3.toUpperCase()}</span>
+                    <span id="tree1" className="build-btn" onClick={e => this.props.onClick(e)}>{tree1.toUpperCase()}</span>
+                    <span id="tree2" className="build-btn active" onClick={e => this.props.onClick(e)}>{tree2.toUpperCase()}</span>
+                    <span id="tree3" className="build-btn" onClick={e => this.props.onClick(e)}>{tree3.toUpperCase()}</span>
                 </div>
             );
-        } else if (activeBuild === "build3") {
+        } else if (activeTree === "tree3") {
             return (
                 <div className="builds">
-                    <span id="build1" className="build-btn" onClick={e => this.props.onClick(e)}>{build1.toUpperCase()}</span>
-                    <span id="build2" className="build-btn" onClick={e => this.props.onClick(e)}>{build2.toUpperCase()}</span>
-                    <span id="build3" className="build-btn active" onClick={e => this.props.onClick(e)}>{build3.toUpperCase()}</span>
+                    <span id="tree1" className="build-btn" onClick={e => this.props.onClick(e)}>{tree1.toUpperCase()}</span>
+                    <span id="tree2" className="build-btn" onClick={e => this.props.onClick(e)}>{tree2.toUpperCase()}</span>
+                    <span id="tree3" className="build-btn active" onClick={e => this.props.onClick(e)}>{tree3.toUpperCase()}</span>
                 </div>
             );
         }

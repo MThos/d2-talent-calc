@@ -1,6 +1,6 @@
 {
     "amazon": {
-        "build1": {
+        "tree1": {
             "name": "javelin and spear",
             "skills": [
                 "jab",
@@ -15,7 +15,7 @@
                 "lightning fury"
             ]
         },
-        "build2": {
+        "tree2": {
             "name": "passive and magic",
             "skills": [
                 "inner sight",
@@ -30,7 +30,7 @@
                 "pierce"
             ]
         },
-        "build3": {
+        "tree3": {
             "name": "bow and crossbow",
             "skills": [
                 "magical arrow",
@@ -47,7 +47,7 @@
         }
     },
     "assassin": {
-        "build1": {
+        "tree1": {
             "name": "Martial Arts",
             "skills": [
                 "",
@@ -62,7 +62,7 @@
                 ""
             ]
         },
-        "build2": {
+        "tree2": {
             "name": "Shadow Disciplines",
             "skills": [
                 "",
@@ -77,7 +77,7 @@
                 ""
             ]
         },
-        "build3": {
+        "tree3": {
             "name": "Traps",
             "skills": [
                 "",
@@ -94,7 +94,7 @@
         }
     },
     "barbarian": {
-        "build1": {
+        "tree1": {
             "name": "Warcries",
             "skills": [
                 "",
@@ -109,7 +109,7 @@
                 ""
             ]
         },
-        "build2": {
+        "tree2": {
             "name": "Combat Masteries",
             "skills": [
                 "",
@@ -124,7 +124,7 @@
                 ""
             ]
         },
-        "build3": {
+        "tree3": {
             "name": "Combat Skills",
             "skills": [
                 "",
@@ -141,7 +141,7 @@
         }
     },
     "druid": {
-        "build1": {
+        "tree1": {
             "name": "Elemental",
             "skills": [
                 "",
@@ -156,7 +156,7 @@
                 ""
             ]
         },
-        "build2": {
+        "tree2": {
             "name": "Shape Shifting",
             "skills": [
                 "",
@@ -171,7 +171,7 @@
                 ""
             ]
         },
-        "build3": {
+        "tree3": {
             "name": "Summoning",
             "skills": [
                 "",
@@ -188,7 +188,7 @@
         }
     },
     "necromancer": {
-        "build1": {
+        "tree1": {
             "name": "Summoning",
             "skills": [
                 "",
@@ -203,7 +203,7 @@
                 ""
             ]
         },
-        "build2": {
+        "tree2": {
             "name": "Poison and Bone",
             "skills": [
                 "",
@@ -218,7 +218,7 @@
                 ""
             ]
         },
-        "build3": {
+        "tree3": {
             "name": "Curses",
             "skills": [
                 "",
@@ -235,7 +235,7 @@
         }
     },
     "paladin": {
-        "build1": {
+        "tree1": {
             "name": "Defensive Auras",
             "skills": [
                 "",
@@ -250,7 +250,7 @@
                 ""
             ]
         },
-        "build2": {
+        "tree2": {
             "name": "Offensive Auras",
             "skills": [
                 "",
@@ -265,7 +265,7 @@
                 ""
             ]
         },
-        "build3": {
+        "tree3": {
             "name": "Combat Skills",
             "skills": [
                 "",
@@ -282,7 +282,7 @@
         }
     },
     "sorceress": {
-        "build1": {
+        "tree1": {
             "name": "Cold",
             "skills": [
                 "",
@@ -297,7 +297,7 @@
                 ""
             ]
         },
-        "build2": {
+        "tree2": {
             "name": "Lightning",
             "skills": [
                 "",
@@ -312,7 +312,7 @@
                 ""
             ]
         },
-        "build3": {
+        "tree3": {
             "name": "Fire",
             "skills": [
                 "",

@@ -14,20 +14,16 @@ class App extends Component {
             skills: [],
             classes: ['amazon','assassin','barbarian','druid','necromancer','paladin','sorceress'],
             activeClass: "amazon",
-            activeBuild: "build1",
-            build1: "",
-            build2: "",
-            build3: "",
-            jab: 0,
-            powerStrike: 0,
-            poisonJavelin: 0,
-            impale: 0,
-            lightningBolt: 0,
-            chargedStrike: 0,
-            plagueJavelin: 0,
-            fend: 0,
-            lightningStrike: 0,
-            lightningFury: 0
+            activeTree: "tree1",
+            tree1: "",
+            tree2: "",
+            tree3: "",
+            tree1skillpts: [0,0,0,0,0,0,0,0,0,0],
+            tree2skillpts: [0,0,0,0,0,0,0,0,0,0],
+            tree3skillpts: [0,0,0,0,0,0,0,0,0,0],
+            tree1skillnames: ['','','','','','','','','',''],
+            tree2skillnames: ['','','','','','','','','',''],
+            tree3skillnames: ['','','','','','','','','','']
         }
     }
 
@@ -38,10 +34,12 @@ class App extends Component {
         .then((response) => response.json())
         .then(SkillsData => {
             this.setState({ skills: SkillsData });
-            this.setState({ build1: SkillsData[this.state.activeClass].build1.name });
-            this.setState({ build2: SkillsData[this.state.activeClass].build2.name });
-            this.setState({ build3: SkillsData[this.state.activeClass].build3.name });
-            console.log(this.state.skills);
+            this.setState({ tree1: SkillsData[this.state.activeClass].tree1.name });
+            this.setState({ tree2: SkillsData[this.state.activeClass].tree2.name });
+            this.setState({ tree3: SkillsData[this.state.activeClass].tree3.name });
+            this.setState({ tree1skillnames: SkillsData[this.state.activeClass].tree1.skills });
+            this.setState({ tree2skillnames: SkillsData[this.state.activeClass].tree2.skills });
+            this.setState({ tree3skillnames: SkillsData[this.state.activeClass].tree3.skills });
         })
         .catch(err => console.error(err));
     }
@@ -52,101 +50,57 @@ class App extends Component {
         // classes
         if (skill.target.className === "d2class") {
             this.setState({ activeClass: skill.target.id })
-            this.setState({ build1: this.state.skills[skill.target.id].build1.name });
-            this.setState({ build2: this.state.skills[skill.target.id].build2.name });
-            this.setState({ build3: this.state.skills[skill.target.id].build3.name });
+            this.setState({ tree1: this.state.skills[skill.target.id].tree1.name });
+            this.setState({ tree2: this.state.skills[skill.target.id].tree2.name });
+            this.setState({ tree3: this.state.skills[skill.target.id].tree3.name });
         }
 
         // builds
-        if (skill.target.id === "build1") {
-            this.setState({ activeBuild: "build1" })
-        } else if (skill.target.id === "build2") {
-            this.setState({ activeBuild: "build2" })
-        } else if (skill.target.id === "build3") {
-            this.setState({ activeBuild: "build3" })
+        if (skill.target.id === "tree1") {
+            this.setState({ activeTree: "tree1" })
+        } else if (skill.target.id === "tree2") {
+            this.setState({ activeTree: "tree2" })
+        } else if (skill.target.id === "tree3") {
+            this.setState({ activeTree: "tree3" })
         }
 
         // skills
-        if (skill.target.id === "ama-jab") {
-            if (skill.type === "click") {
-                this.setState({ jab: this.state.jab + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.jab !== 0) {
-                    this.setState({ jab: this.state.jab - 1 })
-                }                
+        if (skill.type === "click") {
+            let element = skill.target.id.substr(skill.target.id.length - 1, 1) - 1;            
+            if (this.state.activeTree === "tree1") {
+                let skillpts = this.state.tree1skillpts.slice();
+                skillpts[element] = skillpts[element] + 1
+                this.setState({ tree1skillpts: skillpts });
+            } else if (this.state.activeTree === "tree2") {
+                let skillpts = this.state.tree2skillpts.slice();
+                skillpts[element] = skillpts[element] + 1
+                this.setState({ tree2skillpts: skillpts });
+            } else if (this.state.activeTree === "tree3") {
+                let skillpts = this.state.tree3skillpts.slice();
+                skillpts[element] = skillpts[element] + 1
+                this.setState({ tree3skillpts: skillpts });
             }
-        } else if (skill.target.id === "ama-power-strike") {
-            if (skill.type === "click") {
-                this.setState({ powerStrike: this.state.powerStrike + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.powerStrike !== 0) {
-                    this.setState({ powerStrike: this.state.powerStrike - 1 })
-                }                
-            }
-        } else if (skill.target.id === "ama-poison-javelin") {
-            if (skill.type === "click") {
-                this.setState({ poisonJavelin: this.state.poisonJavelin + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.poisonJavelin !== 0) {
-                    this.setState({ poisonJavelin: this.state.poisonJavelin - 1 })
-                }                
-            }
-        } else if (skill.target.id === "ama-impale") {
-            if (skill.type === "click") {
-                this.setState({ impale: this.state.impale + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.impale !== 0) {
-                    this.setState({ impale: this.state.impale - 1 })
-                }                
-            }
-        } else if (skill.target.id === "ama-lightning-bolt") {
-            if (skill.type === "click") {
-                this.setState({ lightningBolt: this.state.lightningBolt + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.lightningBolt !== 0) {
-                    this.setState({ lightningBolt: this.state.lightningBolt - 1 })
-                }                
-            }
-        } else if (skill.target.id === "ama-charged-strike") {
-            if (skill.type === "click") {
-                this.setState({ chargedStrike: this.state.chargedStrike + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.chargedStrike !== 0) {
-                    this.setState({ chargedStrike: this.state.chargedStrike - 1 })
-                }                
-            }
-        } else if (skill.target.id === "ama-plague-javelin") {
-            if (skill.type === "click") {
-                this.setState({ plagueJavelin: this.state.plagueJavelin + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.plagueJavelin !== 0) {
-                    this.setState({ plagueJavelin: this.state.plagueJavelin - 1 })
-                }                
-            }
-        } else if (skill.target.id === "ama-fend") {
-            if (skill.type === "click") {
-                this.setState({ fend: this.state.fend + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.fend !== 0) {
-                    this.setState({ fend: this.state.fend - 1 })
-                }                
-            }
-        } else if (skill.target.id === "ama-lightning-strike") {
-            if (skill.type === "click") {
-                this.setState({ lightningStrike: this.state.lightningStrike + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.lightningStrike !== 0) {
-                    this.setState({ lightningStrike: this.state.lightningStrike - 1 })
-                }                
-            }
-        } else if (skill.target.id === "ama-lightning-fury") {
-            if (skill.type === "click") {
-                this.setState({ lightningFury: this.state.lightningFury + 1 })
-            } else if (skill.type === "contextmenu") {
-                if (this.state.lightningFury !== 0) {
-                    this.setState({ lightningFury: this.state.lightningFury - 1 })
-                }                
-            }
+        } else if (skill.type === "contextmenu") {
+            let element = skill.target.id.substr(skill.target.id.length - 1, 1) - 1;
+            if (this.state.activeTree === "tree1") {
+                if (this.state.tree1skillpts[element] !== 0) {
+                    let skillpts = this.state.tree1skillpts.slice();
+                    skillpts[element] = skillpts[element] - 1
+                    this.setState({ tree1skillpts: skillpts })
+                }    
+            } else if (this.state.activeTree === "tree2") {
+                if (this.state.tree2skillpts[element] !== 0) {
+                    let skillpts = this.state.tree2skillpts.slice();
+                    skillpts[element] = skillpts[element] - 1
+                    this.setState({ tree2skillpts: skillpts })
+                }    
+            } else if (this.state.activeTree === "tree3") {
+                if (this.state.tree3skillpts[element] !== 0) {
+                    let skillpts = this.state.tree3skillpts.slice();
+                    skillpts[element] = skillpts[element] - 1
+                    this.setState({ tree3skillpts: skillpts })
+                }    
+            }                        
         }
     };
 
@@ -163,23 +117,20 @@ class App extends Component {
                     <D2ClassName activeClass={this.state.activeClass} />
                     <BuildTabs 
                         onClick={this.onClick}
-                        activeBuild={this.state.activeBuild}
-                        build1={this.state.build1}
-                        build2={this.state.build2}
-                        build3={this.state.build3} />
+                        activeTree={this.state.activeTree}
+                        tree1={this.state.tree1}
+                        tree2={this.state.tree2}
+                        tree3={this.state.tree3} />
                     <div className="tree">
-                        <Skills onClick={this.onClick} />
+                        <Skills 
+                            onClick={this.onClick} 
+                            tree1skillnames={this.state.tree1skillnames}
+                            tree2skillnames={this.state.tree2skillnames}
+                            tree3skillnames={this.state.tree3skillnames} />
                         <SkillsCounter 
-                            jab={this.state.jab}
-                            powerStrike={this.state.powerStrike}
-                            poisonJavelin={this.state.poisonJavelin}
-                            impale={this.state.impale}
-                            lightningBolt={this.state.lightningBolt}
-                            chargedStrike={this.state.chargedStrike}
-                            plagueJavelin={this.state.plagueJavelin}
-                            fend={this.state.fend}
-                            lightningStrike={this.state.lightningStrike}
-                            lightningFury={this.state.lightningFury} />
+                            tree1skillpts={this.state.tree1skillpts}
+                            tree2skillpts={this.state.tree2skillpts}
+                            tree3skillpts={this.state.tree3skillpts} />
                     </div>
                 </div>
             </div>
