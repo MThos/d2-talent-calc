@@ -23,7 +23,10 @@ class App extends Component {
             tree3skillpts: [0,0,0,0,0,0,0,0,0,0],
             tree1skillnames: ['','','','','','','','','',''],
             tree2skillnames: ['','','','','','','','','',''],
-            tree3skillnames: ['','','','','','','','','','']
+            tree3skillnames: ['','','','','','','','','',''],
+            tree1skillprereqs: ['','','','','','','','','',''],
+            tree2skillprereqs: ['','','','','','','','','',''],
+            tree3skillprereqs: ['','','','','','','','','','']
         }
     }
 
@@ -40,6 +43,9 @@ class App extends Component {
             this.setState({ tree1skillnames: SkillsData[this.state.activeClass].tree1.skills });
             this.setState({ tree2skillnames: SkillsData[this.state.activeClass].tree2.skills });
             this.setState({ tree3skillnames: SkillsData[this.state.activeClass].tree3.skills });
+            this.setState({ tree1skillprereqs: SkillsData[this.state.activeClass].tree1.prereqs });
+            this.setState({ tree2skillprereqs: SkillsData[this.state.activeClass].tree2.prereqs });
+            this.setState({ tree3skillprereqs: SkillsData[this.state.activeClass].tree3.prereqs });
         })
         .catch(err => console.error(err));
     }
@@ -53,6 +59,9 @@ class App extends Component {
             this.setState({ tree1: this.state.skills[skill.target.id].tree1.name });
             this.setState({ tree2: this.state.skills[skill.target.id].tree2.name });
             this.setState({ tree3: this.state.skills[skill.target.id].tree3.name });
+            this.setState({ tree1skillpts: [0,0,0,0,0,0,0,0,0,0] });
+            this.setState({ tree2skillpts: [0,0,0,0,0,0,0,0,0,0] });
+            this.setState({ tree3skillpts: [0,0,0,0,0,0,0,0,0,0] });
         }
 
         // builds
@@ -65,9 +74,9 @@ class App extends Component {
         }
 
         // skills
-        if (skill.type === "click") {
+        if (skill.type === "click" && skill.target.className === "skill") {
             let element = skill.target.id.substr(skill.target.id.length - 1, 1) - 1;            
-            if (this.state.activeTree === "tree1") {
+            if (this.state.activeTree === "tree1" && this.prereqCheck(skill.target.id)) {
                 let skillpts = this.state.tree1skillpts.slice();
                 skillpts[element] = skillpts[element] + 1
                 this.setState({ tree1skillpts: skillpts });
@@ -80,7 +89,7 @@ class App extends Component {
                 skillpts[element] = skillpts[element] + 1
                 this.setState({ tree3skillpts: skillpts });
             }
-        } else if (skill.type === "contextmenu") {
+        } else if (skill.type === "contextmenu" && skill.target.className === "skill") {
             let element = skill.target.id.substr(skill.target.id.length - 1, 1) - 1;
             if (this.state.activeTree === "tree1") {
                 if (this.state.tree1skillpts[element] !== 0) {
@@ -104,6 +113,26 @@ class App extends Component {
         }
     };
 
+    prereqCheck(skillClicked) {
+        let skillNum = skillClicked.length === 11 ? skillClicked.substr(skillClicked.length - 1, 1) : skillClicked.substr(skillClicked.length - 2, 2);
+        let prereqOK = true;
+        if (this.state.activeTree === "tree1") {
+            let skillPts = this.state.tree1skillpts;
+            let skillPrereqs = this.state.tree1skillprereqs[skillNum - 1];
+            skillPrereqs.forEach(function (skill) {
+                if (skillPts[parseInt(skill) - 1] === 0) {
+                    prereqOK = false;
+                }
+            });
+        } else if (this.state.activeTree === "tree2") {
+
+        } else if (this.state.activeTree === "tree3") {
+
+        }
+
+        return (prereqOK ? true : false);
+    };
+
     render() {
         return (
             <div>
@@ -124,10 +153,12 @@ class App extends Component {
                     <div className="tree">
                         <Skills 
                             onClick={this.onClick} 
+                            activeTree={this.state.activeTree}
                             tree1skillnames={this.state.tree1skillnames}
                             tree2skillnames={this.state.tree2skillnames}
                             tree3skillnames={this.state.tree3skillnames} />
                         <SkillsCounter 
+                            activeTree={this.state.activeTree}
                             tree1skillpts={this.state.tree1skillpts}
                             tree2skillpts={this.state.tree2skillpts}
                             tree3skillpts={this.state.tree3skillpts} />

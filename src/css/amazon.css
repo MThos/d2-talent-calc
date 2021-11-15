@@ -1,9 +1,10 @@
+/* amazon tree #1 */
 #tree1skill1 {
     margin: 0;
 }
 
 #tree1skill1pts {
-    margin: 49px 0 0 76px;
+    margin: 46px 0 0 76px;
 }
 
 #tree1skill2 {
@@ -11,7 +12,7 @@
 }
 
 #tree1skill2pts {
-    margin: 149px 0 0 226px;
+    margin: 146px 0 0 226px;
 }
 
 #tree1skill3 {
@@ -19,7 +20,7 @@
 }
 
 #tree1skill3pts {
-    margin: 150px 0 0 376px;
+    margin: 147px 0 0 376px;
 }
 
 #tree1skill4 {
@@ -27,7 +28,7 @@
 }
 
 #tree1skill4pts {
-    margin: 250px 0 0 76px;
+    margin: 247px 0 0 76px;
 }
 
 #tree1skill5 {
@@ -35,7 +36,7 @@
 }
 
 #tree1skill5pts {
-    margin: 250px 0 0 376px;
+    margin: 247px 0 0 376px;
 }
 
 #tree1skill6 {
@@ -43,7 +44,7 @@
 }
 
 #tree1skill6pts {
-    margin: 350px 0 0 226px;
+    margin: 347px 0 0 226px;
 }
 
 #tree1skill7 {
@@ -51,7 +52,7 @@
 }
 
 #tree1skill7pts {
-    margin: 350px 0 0 376px;
+    margin: 347px 0 0 376px;
 }
 
 #tree1skill8 {
@@ -59,7 +60,7 @@
 }
 
 #tree1skill8pts {
-    margin: 450px 0 0 76px;
+    margin: 446px 0 0 76px;
 }
 
 #tree1skill9 {
@@ -67,7 +68,7 @@
 }
 
 #tree1skill9pts {
-    margin: 550px 0 0 226px;
+    margin: 547px 0 0 226px;
 }
 
 #tree1skill10 {
@@ -75,5 +76,167 @@
 }
 
 #tree1skill10pts {
-    margin: 550px 0 0 376px;
+    margin: 547px 0 0 376px;
+}
+
+/* amazon tree #2 */
+#tree2skill1 {
+    margin: 0;
+}
+
+#tree2skill1pts {
+    margin: 47px 0 0 76px;
+}
+
+#tree2skill2 {
+    margin: 0 0 0 300px;
+}
+
+#tree2skill2pts {
+    margin: 49px 0 0 376px;
+}
+
+#tree2skill3 {
+    margin: 100px 0 0 150px;
+}
+
+#tree2skill3pts {
+    margin: 146px 0 0 226px;
+}
+
+#tree2skill4 {
+    margin: 200px 0 0 0;
+}
+
+#tree2skill4pts {
+    margin: 246px 0 0 76px;
+}
+
+#tree2skill5 {
+    margin: 200px 0 0 150px;
+}
+
+#tree2skill5pts {
+    margin: 247px 0 0 226px;
+}
+
+#tree2skill6 {
+    margin: 300px 0 0 300px;
+}
+
+#tree2skill6pts {
+    margin: 346px 0 0 376px;
+}
+
+#tree2skill7 {
+    margin: 400px 0 0 0;
+}
+
+#tree2skill7pts {
+    margin: 446px 0 0 76px;
+}
+
+#tree2skill8 {
+    margin: 400px 0 0 150px;
+}
+
+#tree2skill8pts {
+    margin: 447px 0 0 226px;
+}
+
+#tree2skill9 {
+    margin: 500px 0 0 0;
+}
+
+#tree2skill9pts {
+    margin: 547px 0 0 76px;
+}
+
+#tree2skill10 {
+    margin: 500px 0 0 300px;
+}
+
+#tree2skill10pts {
+    margin: 546px 0 0 376px;
+}
+
+/* amazon tree #3 */
+#tree3skill1 {
+    margin: 0;
+}
+
+#tree3skill1pts {
+    margin: 47px 0 0 76px;
+}
+
+#tree3skill2 {
+    margin: 0 0 0 300px;
+}
+
+#tree3skill2pts {
+    margin: 46px 0 0 376px;
+}
+
+#tree3skill3 {
+    margin: 100px 0 0 150px;
+}
+
+#tree3skill3pts {
+    margin: 146px 0 0 226px;
+}
+
+#tree3skill4 {
+    margin: 200px 0 0 0;
+}
+
+#tree3skill4pts {
+    margin: 247px 0 0 76px;
+}
+
+#tree3skill5 {
+    margin: 200px 0 0 150px;
+}
+
+#tree3skill5pts {
+    margin: 247px 0 0 226px;
+}
+
+#tree3skill6 {
+    margin: 300px 0 0 300px;
+}
+
+#tree3skill6pts {
+    margin: 347px 0 0 376px;
+}
+
+#tree3skill7 {
+    margin: 400px 0 0 0;
+}
+
+#tree3skill7pts {
+    margin: 447px 0 0 76px;
+}
+
+#tree3skill8 {
+    margin: 400px 0 0 150px;
+}
+
+#tree3skill8pts {
+    margin: 447px 0 0 226px;
+}
+
+#tree3skill9 {
+    margin: 500px 0 0 0;
+}
+
+#tree3skill9pts {
+    margin: 547px 0 0 76px;
+}
+
+#tree3skill10 {
+    margin: 500px 0 0 300px;
+}
+
+#tree3skill10pts {
+    margin: 546px 0 0 376px;
 }
